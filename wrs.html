@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Recognition</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply a background color and font to the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Style the main content area */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Waste Recognition</h1>
+        <p>Your source for waste management solutions</p>
+    </header>
+
+    <div class="container">
+        <h2>Welcome to Waste Recognition</h2>
+        <p>Waste recognition is the process of using various technologies and techniques to identify and categorize different types of waste materials...</p>
+        <!-- Add more content here -->
+    </div>
+
+    
+
+    <py-script>
+        import RPi.GPIO as GPIO
+        import time
+    
+       
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(17, GPIO.IN) 
+    
+        def detect_waste():
+            while True:
+                weight = GPIO.input(17) 
+    
+                if weight == 1:
+                    print("Waste detected!")
+                   
+    
+                time.sleep(1)  
+    
+        try:
+            detect_waste()  
+        except KeyboardInterrupt:
+            GPIO.cleanup()  
+      </py-script>
+</body>
+</html>

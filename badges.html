@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Waste Warriors Recognition</title>
+  <style>
+    /* CSS styles for Waste Warriors badges */
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #37517e;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+    
+    /* CSS styles for certificates */
+    .certificate {
+      border: 2px solid #37517e;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      width: 20%;
+      margin: auto;
+      cursor: pointer;
+      background-color: #37517ec4;
+      
+      
+
+    }
+    .certificate:hover{
+      background-color: #37517e;
+      color: #ffffff;
+    }
+
+
+    
+    .alg{
+      display: flex;
+      justify-content: space-around;
+    }
+    .head{
+      text-align: center;
+      /* background-color: #15d21b; */
+    }
+    .badges_head{
+      text-align: center;
+    }
+    .certificate1{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1 class="head">Waste Warriors Recognition</h1>
+  
+    <h2 class="badges_head">Badges</h2>
+    <div class = "alg">
+      <div>
+        <img src="images/waroior1.png">
+        <br>
+        <div class="badge" onclick="showBadge1()" >Waste Warrior Level 1</div>
+      </div>
+      <div>
+        <img src="images/waroior2.png">
+        <br>
+        <div class="badge" onclick="showBadge2()">Waste Warrior Level 2</div>
+      </div>
+      <div>
+        <img src="images/waroior3.png">
+        <br>
+        <div class="badge" onclick="showBadge3()">Waste Warrior Level 3</div>
+      </div>
+      
+    </div>
+    <script>
+      function showCertificate() {
+        // Add your code to show the certificate or perform any desired action
+        alert("Congratulations! You've earned a Certificate of Achievement!");
+      }
+    </script>
+    <script>
+      function showBadge1() {
+        // Add your code to show the certificate or perform any desired action
+  
+        alert("Congratulations! You've earned a Level 1 of Achievement!");
+      }
+    </script>
+    <script>
+      function showBadge2() {
+        // Add your code to show the certificate or perform any desired action
+        alert("Congratulations! You've earned a Level 2 of Achievement!");
+      }
+    </script>
+    <script>
+      function showBadge3() {
+        // Add your code to show the certificate or perform any desired action
+        alert("Congratulations! You've earned a level 3 of Achievement!");
+      }
+    </script>
+  
+    
+    <h2 class="certificate1">Certificates</h2>
+    <div class="certificate" onclick="showCertificate()">Certificate of Achievement</div>
+  </div>
+  
+  
+</body>
+</html>
